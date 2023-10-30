@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise Countdown</title>
+    <style>
+        body {
+            background-color: #ff69b4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #countdown-container {
+            background-color: red;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        #countdown {
+            font-size: 36px;
+            font-family: Arial, sans-serif;
+        }
+
+        #message-container {
+            display: none;
+            background-color: green;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        #apology-message {
+            font-size: 24px;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div id="countdown-container">
+        <div id="countdown">10</div>
+    </div>
+
+    <div id="message-container">
+        <p id="apology-message">HI MY LOVE.</p>
+        <p>I hope this message finds you well. There's something that I need to express, something that has been weighing heavily on my heart. I want to tell you how deeply sorry I am.
+.</p>
+        <p>I'm sorry for any pain or hurt I may have caused you. I never intended to hurt you in any way, and it pains me to know that my actions may have done just that. I recognize that I've made mistakes, and for that, I truly apologize.
+
+I want you to know that I miss you more than words can ever convey. Every day without you feels incomplete. Your absence has left a void in my life, and it has given me a newfound appreciation for all the moments we shared, the laughter, the adventures, and even the little disagreements. It's in those moments that I found immense happiness, and I long for them to return.
+
+I hope you can find it in your heart to forgive me and consider the possibility of us coming back together. I want nothing more than to make things right and create new, beautiful memories with you. You mean the world to me, and I can't imagine my life without you in it.
+
+Please know that I'm willing to work on our relationship, to be a better partner, and to cherish every moment we have together. If you're open to it, I'm ready to make amends and rebuild what we once had.
+
+I love you with all my heart, and I hope you can feel the sincerity in my words. I anxiously await your response, praying that you'll give us a chance to mend what's been broken and rekindle the love that we once shared..</p>
+        <p>I love you more than words can express.</p>
+    </div>
+
+    <script>
+        // JavaScript for countdown functionality
+        const countdownElement = document.getElementById('countdown');
+        const messageContainer = document.getElementById('message-container');
+        const countdownDuration = 10; // Set the countdown duration in seconds
+
+        let countdown = countdownDuration;
+
+        function updateCountdown() {
+            countdownElement.textContent = countdown;
+            countdown--;
+
+            if (countdown < 0) {
+                countdownElement.style.display = 'none';
+                messageContainer.style.display = 'block';
+            }
+        }
+
+        updateCountdown();
+        const countdownInterval = setInterval(updateCountdown, 1000);
+
+        // You can add JavaScript functionality here if needed.
+    </script>
+</body>
+</html>
